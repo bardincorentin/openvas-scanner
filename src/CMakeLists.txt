@@ -142,6 +142,11 @@ if (FEATURE_REVERSE_LOOKUP_EXCLUDED)
   message (STATUS "Feature enabled: FEATURE_REVERSE_LOOKUP_EXCLUDED")
 endif (FEATURE_REVERSE_LOOKUP_EXCLUDED)
 
+if (AUTH_MQTT)
+  add_definitions (-DAUTH_MQTT)
+  message (STATUS "Feature enabled: AUTH_MQTT (authenticated MQTT for compliance LSC)")
+endif (AUTH_MQTT)
+
 if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
   set (EXECINFO_LDFLAGS "execinfo")
 endif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
