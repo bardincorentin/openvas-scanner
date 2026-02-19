@@ -22,6 +22,8 @@ if (NOT CMAKE_BUILD_TYPE)
 endif (NOT CMAKE_BUILD_TYPE)
 
 OPTION (ENABLE_COVERAGE "Enable support for coverage analysis" OFF)
+OPTION (FEATURE_HOSTS_ALLOWED_ONLY "Enable optimized host allow/deny filtering before scan start (licensed feature)" ON)
+OPTION (FEATURE_REVERSE_LOOKUP_EXCLUDED "Enable reverse lookup with exclusion tracking (licensed feature)" ON)
 
 ## Retrieve git revision (at configure time)
 include (GetGit)
